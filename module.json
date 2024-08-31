@@ -1,4 +1,5 @@
 {
+  "id": "pf2e-item-actions",
   "name": "item-actions",
   "title": "Item Actions",
   "description": "Gives actors actions if they equip certain items",
