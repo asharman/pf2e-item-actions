@@ -1,0 +1,16 @@
+{
+  "name": "item-actions",
+  "title": "Item Actions",
+  "description": "Gives actors actions if they equip certain items",
+  "authors": [
+    {
+      "name": "asharman"
+    }
+  ],
+  "version": "1",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "scripts": ["scripts/module.js"]
+}
