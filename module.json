@@ -1,17 +1,19 @@
 {
   "id": "pf2e-item-actions",
-  "name": "item-actions",
-  "title": "Item Actions",
-  "description": "Gives actors actions if they equip certain items",
+  "title": "PF2e Item Actions",
+  "description": "Gives actors actions when they equip an item with an action in it's description",
+  "version": "#{VERSION}#",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
   "authors": [
     {
       "name": "asharman"
     }
   ],
-  "version": "1",
-  "compatibility": {
-    "minimum": "12",
-    "verified": "12"
-  },
-  "scripts": ["scripts/module.js"]
+  "scripts": ["scripts/module.js"],
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#"
 }
