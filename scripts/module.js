@@ -31,8 +31,13 @@ function skipUpdateItem(item, changes) {
 }
 
 async function extractActionsFromItem(item) {
-  const actionIds = String(item.description).match(/(?<=@UUID\[)Item.*?(?=\])/);
-  return Promise.all(actionIds.map((uuid) => fromUuid(uuid)));
+  const regex = new RegExp(/(?<=@UUID\[)Item.*?(?=\])/g);
+
+  const gmIds = String(item.system.description.gm).match(regex);
+  const descriptionIds = String(item.system.description.value).match(regex);
+  const itemIds = descriptionIds.concat(gmIds);
+
+  return Promise.all(itemIds.map((uuid) => fromUuid(uuid)));
 }
 
 function setModuleFlag(item, flagName, value) {
