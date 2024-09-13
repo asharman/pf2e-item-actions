@@ -33,8 +33,10 @@ function skipUpdateItem(item, changes) {
 async function extractActionsFromItem(item) {
   const regex = new RegExp(/(?<=@UUID\[)Item.*?(?=\])/g);
 
-  const gmIds = String(item.system.description.gm).match(regex);
-  const descriptionIds = String(item.system.description.value).match(regex);
+  const gmIds = String(item.system.description.gm).match(regex) ?? [];
+  const descriptionIds =
+    String(item.system.description.value).match(regex) ?? [];
+
   const itemIds = descriptionIds.concat(gmIds);
 
   return Promise.all(itemIds.map((uuid) => fromUuid(uuid)));
